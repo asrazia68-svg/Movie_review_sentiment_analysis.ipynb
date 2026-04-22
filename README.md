@@ -31,11 +31,11 @@ Additionally, it provides a movie recommendation decision based on sentiment sco
 - Custom recommendation system:
 
 
-   - . 👍 Recommend movie
+   - 👍 Recommend movie
 
-   - . 👎 Do not recommend
+   - 👎 Do not recommend
 
-   - . 🤔 Neutral suggestion
+   - 🤔 Neutral suggestion
 
 Overfitting detection (training vs testing accuracy)
 
@@ -117,6 +117,7 @@ TF-IDF Vectorization (Top 5000 features)
 ---
 
 **7. Recommendation System**
+
 The system uses decision_function score to decide:
 
 | Score Range | Sentiment | Recommendation |
