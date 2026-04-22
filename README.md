@@ -8,11 +8,11 @@ This project is a Machine Learning-based Sentiment Analysis System built on the 
 
 It classifies user reviews into:
 
-Positive (1)
+- Positive (1)
 
-Negative (-1)
+- Negative (-1)
 
-Neutral (0)
+- Neutral (0)
 
 Additionally, it provides a movie recommendation decision based on sentiment score.
 
@@ -20,15 +20,15 @@ Additionally, it provides a movie recommendation decision based on sentiment sco
 
 # 🚀 Features
 
-. Text preprocessing (cleaning, stopwords removal, lemmatization)
+- Text preprocessing (cleaning, stopwords removal, lemmatization)
 
-. TF-IDF feature extraction
-
-
-. Sentiment classification using Linear SVM (LinearSVC)
+- TF-IDF feature extraction
 
 
-. Custom recommendation system:
+- Sentiment classification using Linear SVM (LinearSVC)
+
+
+- Custom recommendation system:
 
 
    - . 👍 Recommend movie
@@ -44,23 +44,23 @@ Overfitting detection (training vs testing accuracy)
 
 **🛠️ Technologies Used**
 
-Python
+- Python
 
-NumPy
+- NumPy
 
-Pandas
+- Pandas
 
-NLTK
+- NLTK
 
-Scikit-learn
+- Scikit-learn
 
 --- 
 
 **📂 Dataset**
 
-IMDB Movie Reviews Dataset
+- IMDB Movie Reviews Dataset
 
-Contains labeled reviews (positive, negative, neutral)
+- Contains labeled reviews (positive, negative, neutral)
 
 ---
 
@@ -73,25 +73,25 @@ df = pd.read_csv('/content/IMDB Dataset.csv')
 ---
 **2. Sentiment Mapping**
 
-Positive → 1
+- Positive → 1
 
-Negative → -1
+- Negative → -1
 
-Neutral → 0
+- Neutral → 0
 
 --- 
 
 **3. Text Preprocessing**
 
-Remove HTML tags
+- Remove HTML tags
 
-Remove special characters
+- Remove special characters
 
-Convert to lowercase
+- Convert to lowercase
 
-Remove stopwords
+- Remove stopwords
 
-Lemmatization
+- Lemmatization
 
 ---
 
@@ -103,36 +103,30 @@ TF-IDF Vectorization (Top 5000 features)
 
 **5. Model Training**
 
-Algorithm: LinearSVC
+- Algorithm: LinearSVC
 
-Regularization parameter: C = 0.01
+- Regularization parameter: C = 0.01
 
 ---
 **6. Evaluation**
 
-Accuracy Score
+- Accuracy Score
 
-Classification Report 
+- Classification Report 
 
 ---
 
 **7. Recommendation System**
-
 The system uses decision_function score to decide:
 
-Score Range        	Sentiment	     Recommendation
--
-- > 0.1	               Positive     	Recommend movie
+| Score Range | Sentiment | Recommendation |
+|------------|----------|---------------|
+| > 0.1      | Positive | Recommend movie |
+| < -0.1     | Negative | Do not recommend |
+| -0.1 to 0.1| Neutral  | Maybe watch |
 
-
-- < -0.1	           Negative	      Do not recommend
-
--
-
--0.1 to 0.1	         Neutral	         Maybe watch
-
----
-
+ --- 
+ 
 **📊 Example Output**
 
 Score: 0.85, Sentiment: 1, Action: Recommend movie
@@ -141,9 +135,9 @@ Score: 0.85, Sentiment: 1, Action: Recommend movie
 
 **📉 Overfitting Check**
 
-Compares training and testing accuracy
+- Compares training and testing accuracy
 
-Warns if model is overfitting
+- Warns if model is overfitting
 
 ---
 
@@ -155,8 +149,10 @@ pip install numpy pandas nltk scikit-learn
 
 *2-Download NLTK data:*
 
-import nltk
+import nltk 
+
 nltk.download('stopwords')
+
 nltk.download('wordnet')
 
 ---
@@ -174,11 +170,11 @@ get_recommendation("This movie was amazing!")
 
 **📌 Future Improvements**
 
-. Add Deep Learning models (LSTM, BERT)
+- Add Deep Learning models (LSTM, BERT)
 
-. Improve neutral sentiment detection
+- Improve neutral sentiment detection
 
-. Deploy as a web app (Flask/Streamlit)
+- Deploy as a web app (Flask/Streamlit)
 
 ---
 
