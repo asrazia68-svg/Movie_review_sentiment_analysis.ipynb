@@ -24,7 +24,8 @@ Additionally, it provides a movie recommendation decision based on sentiment sco
    . 👎 Do not recommend
    . 🤔 Neutral suggestion
 Overfitting detection (training vs testing accuracy)
-# 🛠️ Technologies Used
+
+**🛠️ Technologies Used**
 Python
 NumPy
 Pandas
@@ -33,7 +34,7 @@ Scikit-learn
 
 --- 
 
-# 📂 Dataset
+**📂 Dataset**
 
 IMDB Movie Reviews Dataset
 Contains labeled reviews (positive, negative, neutral)
@@ -42,94 +43,120 @@ Contains labeled reviews (positive, negative, neutral)
 
 # ⚙️ Workflow
 
-# 1. Data Loading
+**1. Data Loading**
 
 df = pd.read_csv('/content/IMDB Dataset.csv')
 
 ---
-# 2. Sentiment Mapping
+**2. Sentiment Mapping**
 
 Positive → 1
+
 Negative → -1
+
 Neutral → 0
 
 --- 
 
-# 3. Text Preprocessing 
+**3. Text Preprocessing**
 
 Remove HTML tags
+
 Remove special characters
+
 Convert to lowercase
+
 Remove stopwords
+
 Lemmatization
 
 ---
 
-# 4. Feature Extraction
+**4. Feature Extraction**
 
 TF-IDF Vectorization (Top 5000 features)
 
 --- 
 
-# 5. Model Training
+**5. Model Training**
 
 Algorithm: LinearSVC
+
 Regularization parameter: C = 0.01
 
 ---
 # 6. Evaluation
 
 Accuracy Score
+
 Classification Report 
 
 ---
 
-# 7. Recommendation System
+**7. Recommendation System**
 
 The system uses decision_function score to decide:
 
-**Score Range** 	 **Sentiment**     **Recommendation**
-> 0.1	             Positive    	        Recommend movie
-< -0.1	            Negative	           Do not recommend
--0.1 to 0.1   	    Neutral             	Maybe watch
-# 📊 Example Output
+Score Range        	Sentiment	     Recommendation
+-
+> 0.1	               Positive     	Recommend movie
+-
+
+< -0.1	           Negative	      Do not recommend
+
+-
+
+-0.1 to 0.1	         Neutral	         Maybe watch
+
+---
+
+**📊 Example Output**
 
 Score: 0.85, Sentiment: 1, Action: Recommend movie
 
 ---
 
-# 📉 Overfitting Check
+**📉 Overfitting Check**
 
 Compares training and testing accuracy
+
 Warns if model is overfitting
 
 ---
 
-# ▶️ How to Run
+**▶️ How to Run**
 
-Install dependencies:
+*1-Install dependencies:*
+
 pip install numpy pandas nltk scikit-learn
-Download NLTK data:
+
+*2-Download NLTK data:*
+
 import nltk
 nltk.download('stopwords')
 nltk.download('wordnet')
-Run the script:
-python main.py
+---
+*3- Run the script:*
 
+python main.py
 ---
 
-# 🧪 Test Your Own Review
+**🧪 Test Your Own Review**
 
 get_recommendation("This movie was amazing!")
 
-# 📌 Future Improvements
+---
+
+**📌 Future Improvements**
 
 . Add Deep Learning models (LSTM, BERT)
+
 . Improve neutral sentiment detection
+
 . Deploy as a web app (Flask/Streamlit)
 
 ---
 
-# ⭐ Conclusion
+**⭐ Conclusion**
 
 This project demonstrates how Natural Language Processing (NLP) and Machine Learning can be used to analyze user opinions and provide intelligent recommendations.
