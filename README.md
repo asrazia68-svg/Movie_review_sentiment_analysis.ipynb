@@ -5,10 +5,13 @@
 # 📌 Project Overview
 
 This project is a Machine Learning-based Sentiment Analysis System built on the IMDB movie reviews dataset.
+
 It classifies user reviews into:
 
 Positive (1)
+
 Negative (-1)
+
 Neutral (0)
 
 Additionally, it provides a movie recommendation decision based on sentiment score.
@@ -16,20 +19,39 @@ Additionally, it provides a movie recommendation decision based on sentiment sco
 ---
 
 # 🚀 Features
+
 . Text preprocessing (cleaning, stopwords removal, lemmatization)
+
 . TF-IDF feature extraction
+
+
 . Sentiment classification using Linear SVM (LinearSVC)
+
+
 . Custom recommendation system:
-   . 👍 Recommend movie
-   . 👎 Do not recommend
-   . 🤔 Neutral suggestion
+
+
+   - . 👍 Recommend movie
+
+   - . 👎 Do not recommend
+
+   - . 🤔 Neutral suggestion
+
 Overfitting detection (training vs testing accuracy)
 
+---
+
+
 **🛠️ Technologies Used**
+
 Python
+
 NumPy
+
 Pandas
+
 NLTK
+
 Scikit-learn
 
 --- 
@@ -37,6 +59,7 @@ Scikit-learn
 **📂 Dataset**
 
 IMDB Movie Reviews Dataset
+
 Contains labeled reviews (positive, negative, neutral)
 
 ---
@@ -85,7 +108,7 @@ Algorithm: LinearSVC
 Regularization parameter: C = 0.01
 
 ---
-# 6. Evaluation
+**6. Evaluation**
 
 Accuracy Score
 
@@ -99,10 +122,10 @@ The system uses decision_function score to decide:
 
 Score Range        	Sentiment	     Recommendation
 -
-> 0.1	               Positive     	Recommend movie
--
+- > 0.1	               Positive     	Recommend movie
 
-< -0.1	           Negative	      Do not recommend
+
+- < -0.1	           Negative	      Do not recommend
 
 -
 
@@ -135,10 +158,12 @@ pip install numpy pandas nltk scikit-learn
 import nltk
 nltk.download('stopwords')
 nltk.download('wordnet')
+
 ---
 *3- Run the script:*
 
 python main.py
+
 ---
 
 **🧪 Test Your Own Review**
